@@ -7,10 +7,12 @@
 	},
 	"dependencies": {
 		"express": "4.12.x",
-		"cfenv": "1.0.x"
+		"cfenv": "1.0.x",
+		"ejs": "2.3.2",
+		"body-parser": "~1.13.2"
 	},
 	"repository": {},
 	"engines": {
 		"node": "0.12.x"
-	} 
+	}
 }

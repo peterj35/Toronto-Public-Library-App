@@ -7,23 +7,31 @@
 // This application uses express as its web server
 // for more info, see: http://expressjs.com
 var express = require('express');
-
-// cfenv provides access to your Cloud Foundry environment
-// for more info, see: https://www.npmjs.com/package/cfenv
 var cfenv = require('cfenv');
+var ejs = require('ejs');
+var bodyParser = require('body-parser');
 
 // create a new express server
 var app = express();
+var appEnv = cfenv.getAppEnv();
+
+// Set the template engine to use EJS
+app.set('view engine', 'ejs');
 
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
 
-// get the app environment from Cloud Foundry
-var appEnv = cfenv.getAppEnv();
+// Setup routes
+var index = require('./routes/index');
+var catalog = require('./routes/catalog');
+var analytics = require('./routes/analytics');
+
+app.use('/', index);
+app.use('/catalog', catalog);
+app.use('/analytics', analytics);
+
 
 // start server on the specified port and binding host
 app.listen(appEnv.port, '0.0.0.0', function() {
-
-	// print a message when the server starts listening
   console.log("server starting on " + appEnv.url);
 });
