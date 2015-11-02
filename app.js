@@ -25,10 +25,12 @@ app.use(express.static(__dirname + '/public'));
 var index = require('./routes/index');
 var catalog = require('./routes/catalog');
 var analytics = require('./routes/analytics');
+var createprogram = require('./routes/createprogram');
 
 app.use('/', index);
 app.use('/catalog', catalog);
 app.use('/analytics', analytics);
+app.use('/createprogram', createprogram);
 
 
 // start server on the specified port and binding host
