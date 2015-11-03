@@ -63,7 +63,30 @@
                   </th>
                 </tr>
               </thead>
+              <% if (programs.length < 1) { %>
+                <div class="row">
+                  No Programs found!
+                </div>
+              <% } %>
+              <% programs.forEach(function(program, i) { %>
+              <tbody>
+                <tr>
+                  <td>
+                    <%= program.title %>
+                  </td>
+                  <td>
+                    <%- program.library %>
+                  </td>
+                  <td>
+                    <% program.eventtype %>
+                  </td>
+                  <td>
+                    <% program.agegroup %>
+                  </td>
+                </tr>
+              </tbody>
             </table>
+            <% }); %>
           </div>
         </div>
       </div>
@@ -75,6 +98,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- catalog js -->
+    <script src="js/catalog.js"></script>
   </body>
 
 </html>

@@ -9,7 +9,9 @@
 		"express": "4.12.x",
 		"cfenv": "1.0.x",
 		"ejs": "2.3.2",
-		"body-parser": "~1.13.2"
+		"body-parser": "~1.13.2",
+		"knex": "~0.8.6",
+		"watson-developer-cloud": "0.10.6"
 	},
 	"repository": {},
 	"engines": {
