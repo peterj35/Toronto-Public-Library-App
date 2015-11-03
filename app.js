@@ -35,6 +35,7 @@ var analytics = require('./routes/analytics');
 var createprogram = require('./routes/createprogram');
 var createinstance = require('./routes/createinstance');
 var texttospeech = require('./routes/text-to-speech');
+var programsubmit = require('./routes/programsubmit');
 //var program = require('./routes/program');
 
 
@@ -44,8 +45,10 @@ app.use('/analytics', analytics);
 app.use('/createprogram', createprogram);
 app.use('/createinstance', createinstance);
 app.use('/text-to-speech', texttospeech);
+app.use('/programsubmit', programsubmit);
 
 //catalog.use('/program', program);
+
 
 // For local development, replace username and password
 var textToSpeech = watson.text_to_speech({
