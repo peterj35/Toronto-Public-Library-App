@@ -22,6 +22,16 @@ module.exports.findProgramFromName = function(programName, callback) {
 
 }
 
+module.exports.createProgram = function(programName, programType, programAge) {
+
+	models.Program.create({
+		name: programName,
+		type: programType,
+		age: programAge
+	})
+
+}
+
 module.exports.createEvent = function(programName, location, eventType, age) {
 	models.Event.create({
 		name: programName,
