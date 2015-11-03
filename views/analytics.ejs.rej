@@ -1,0 +1,13 @@
+diff a/views/analytics.ejs b/views/analytics.ejs	(rejected hunks)
+@@ -49,6 +49,11 @@
+     </div>
+ 
+ 
++	<div class="dropdown">
++  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
++    Library Branch Name
++    <span class="caret"></span>
++  </button>
+     <!-- jQuery -->
+     <script src="js/jquery-1.11.3.min.js"></script>
+ 

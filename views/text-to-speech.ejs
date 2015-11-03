@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Watson Text-To-Speech : Toronto Public Library Programs</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Toronto Public Library Programs</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="/"><i class="fa fa-home"></i> &nbsp;Home</a></li>
+            <li><a href="/catalog"><i class="fa fa-database"></i> &nbsp;Catalog</a></li>
+            <li><a href="/analytics"><i class="fa fa-bar-chart"></i> &nbsp;Analytics</a></li>
+            <li class="active"><a href="/text-to-speech"><i class="fa fa-comment"></i> &nbsp;Text to Speech</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Page Content -->
+    <div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="page-header">
+              <h1>IBM Watson Text-To-Speech</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!--Drop down menus-->
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+              <span id="dropdownMenuDefault" class="dropdown-text">English (en-US): Allison (female)</span>
+              <span class="caret"></span>
+              </button>
+              <ul id="dropdownMenuList" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-lg-7">
+            <textarea id="textArea" name="text" rows="10" class="content form-control"></textarea>
+          </div>
+        </div>
+        <div class="form-group row buttons-container">
+          <div class="col-lg-4 col-md-4">
+            <button type="button" class="btn btn-block btn-success speak-button" name="button">Submit</button>
+            <button type="button" class="btn btn-block btn-warning download-button" name="button">Download .ogg</button>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="audioParent">
+            <audio class="audio" controls></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Text To speech js -->
+    <script src="js/constants.js"></script>
+    <script src="js/text-to-speech.js"></script>
+  </body>
+
+</html>
