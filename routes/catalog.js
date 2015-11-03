@@ -8,7 +8,6 @@ router.get('/', function(req, res, next) {
     	if (err) {
     		console.log(err)
     	}
-    	console.log(events)
     	res.render('catalog', {
     		programs: events
     	})
@@ -23,7 +22,8 @@ router.get('/:programName', function(req, res) {
 			console.log(err)
 		}
 		res.render('instances', {
-			events: events
+			events: events,
+			'programName': programName
 		})
 	})
 })

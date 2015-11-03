@@ -22,7 +22,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Toronto Public Library Programs</a>
+          <a class="navbar-brand" href="/">
+            <img src="images/logo.png" style="max-width:100px;" alt="" />
+          </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -46,7 +48,7 @@
         </div>
         <div class="col-md-12">
           <div class="table-container">
-            <a href="/createinstance"><button type="button" class="btn btn-success">Create New Event</button></a>
+            <a href="/createinstance/<%= programName %>"><button type="button" class="btn btn-success">Create New Event</button></a>
             <table id="catalog" class="table margin-top">
               <thead>
                 <tr>
@@ -61,6 +63,12 @@
                   </th>
                   <th>
                     <a href="#">Age Group</a>
+                  </th>
+                  <th>
+                    <a href="#">Date</a>
+                  </th>
+                  <th>
+                    <a href="#">Time</a>
                   </th>
                 </tr>
               </thead>
@@ -84,6 +92,12 @@
                   <td>
                     <%= event.age %>
                   </td>
+                  <td>
+                    <%= event.date %>
+                  </td>
+                  <td>
+                    <%= event.time %>
+                  </td>
                 </tr>
                 <% }); %>
               </tbody>
@@ -100,7 +114,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-  
+
   </body>
 
 </html>

@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>Catalog : Toronto Public Library Programs</title>
+    <title>Warning! : Toronto Public Library Programs</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,48 +42,16 @@
 
     <!-- Page Content -->
     <div>
-      <div class="container-fluid">
-        <div class="page-header">
-          <h1>Catalog</h1>
-        </div>
-        <div class="col-md-12">
-          <div class="table-container">
-            <a href="/createprogram"><button type="button" class="btn btn-success">Create New Program</button></a>
-            <table id="catalog" class="table margin-top">
-              <thead>
-                <tr>
-                  <th>
-                    <a href="#">Title</a>
-                  </th>
-                  <th>
-                    <a href="#">Event Type</a>
-                  </th>
-                  <th>
-                    <a href="#">Age Group</a>
-                  </th>
-                </tr>
-              </thead>
-              <% if (programs.length < 1) { %>
-                <div class="row">
-                  No Programs found!
-                </div>
-              <% } %>
-              <tbody>
-                <% programs.forEach(function(program, i) { %>
-                <tr>
-                  <td>
-                    <a href="/catalog/<%= program.name %>"><%= program.name %></a>
-                  </td>
-                  <td>
-                    <%= program.type %>
-                  </td>
-                  <td>
-                    <%= program.age %>
-                  </td>
-                </tr>
-                <% }); %>
-              </tbody>
-            </table>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <h4>Warning!</h4>
+            <p>
+              There are the following warnings for that event date:
+            </p>
+            <p style="color=red;">
+              Toronto's Medical Officer of Health has extended the Extreme Heat Alert
+            </p>
           </div>
         </div>
       </div>
@@ -95,9 +63,6 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!-- catalog js -->
-    <script src="js/catalog.js"></script>
   </body>
 
 </html>

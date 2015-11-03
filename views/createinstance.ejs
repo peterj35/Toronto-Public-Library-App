@@ -2,12 +2,12 @@
 <html>
 
   <head>
-    <title><%= program.title %></title>
+    <title><%= program %></title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
 
@@ -48,11 +48,11 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <form class="" action="index.html" method="post">
+            <form class="" action="/createinstance" method="post">
               <div class="row control-group">
                 <div class="form-group col-xs-12 floating-label-form-group controls">
                   <label>Title</label>
-                  <input type="text" class="form-control" value="<%= program.title %>" name="title" id="title" required data-validation-required-message="Please enter your name.">
+                  <input type="text" class="form-control" value="<%= program %>" name="title" id="title" required data-validation-required-message="Please enter your name.">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
@@ -107,7 +107,7 @@
               </div>
               <div class="row">
                 <div class="form-group col-xs-12">
-                  <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                  <button type="submit" action="submit" class="btn btn-success btn-lg">Submit</button>
                 </div>
               </div>
             </form>
@@ -118,12 +118,12 @@
 
 
     <!-- jQuery -->
-    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="../js/jquery-1.11.3.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
-    <script src="js/createinstance.js"></script>
+    <script src="../js/createinstance.js"></script>
   </body>
 
 </html>
