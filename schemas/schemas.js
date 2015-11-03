@@ -17,12 +17,12 @@ var userSchema = mongoose.Schema({
 var eventSchema = mongoose.Schema({
 	name: String,
 	date: String,
-	start: String,
+	time: String,
 	end: String,
 	location: String,
+	eventType: String,
 	age: String,
 	description: String,
-	finished: Boolean
 	attendance: [userSchema]
 });
 
