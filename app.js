@@ -32,11 +32,33 @@ var index = require('./routes/index');
 var catalog = require('./routes/catalog');
 var analytics = require('./routes/analytics');
 var createprogram = require('./routes/createprogram');
+var texttospeech = require('./routes/text-to-speech');
 
 app.use('/', index);
 app.use('/catalog', catalog);
 app.use('/analytics', analytics);
 app.use('/createprogram', createprogram);
+app.use('/text-to-speech', texttospeech);
+
+// For local development, replace username and password
+var textToSpeech = watson.text_to_speech({
+  version: 'v1',
+  username: "be90a5c2-03f2-439c-a75f-4d0fd1659c5e",
+  password: "JGJOaqk28pi4"
+});
+
+app.get('/api/synthesize', function(req, res, next) {
+  var transcript = textToSpeech.synthesize(req.query);
+  transcript.on('response', function(response) {
+    if (req.query.download) {
+      response.headers['content-disposition'] = 'attachment; filename=transcript.ogg';
+    }
+  });
+  transcript.on('error', function(error) {
+    next(error);
+  });
+  transcript.pipe(res);
+});
 
 var MongoClient = mongo.MongoClient
 
