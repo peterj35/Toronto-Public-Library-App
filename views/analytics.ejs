@@ -22,7 +22,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Toronto Public Library Programs</a>
+          <a class="navbar-brand" href="/">
+            <img src="images/logo.png" style="max-width:100px;" alt="" />
+          </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -48,7 +50,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <a href="#" class="thumbnail">
+            <a href="/graph1" class="thumbnail">
               <img src="images/graph1.png" alt="" />
               <div class="caption">
                 <p class="small" style="font-size: 9px;">
@@ -58,11 +60,21 @@
             </a>
           </div>
           <div class="col-md-4">
-            <a href="#" class="thumbnail">
-              <img src="images/graph2.png" alt="" />
+            <a href="/graph4" class="thumbnail">
+              <img src="images/graph5.png" alt="" />
               <div class="caption">
                 <p class="small" style="font-size: 9px;">
-                  Attendancy for all branches for all programs over time of April
+                  Attendancy for each program for all branches
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="/graph3" class="thumbnail">
+              <img src="images/graph4.png" alt="" />
+              <div class="caption">
+                <p class="small" style="font-size: 9px;">
+                  Average age of people who attended programs for all branches
                 </p>
               </div>
             </a>
@@ -102,6 +114,21 @@
       	        <li><a href="javascript:void(0)" class="cantonesebtn">Cantonese Book Club</a></li>
               </ul>
             </div>
+            <div class="btn-group"  role="group">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Analysis Type
+                <span class="caret"></span>
+              </button>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                <li><a href="javascript:void(0)" class="agebtn">Age Group Analysis</a></li>
+                <li><a href="javascript:void(0)" class="geobtn">Geolocation Analysis</a></li>
+                <li><a href="javascript:void(0)" class="langbtn">Preferred Language Analysis</a></li>
+              </ul>
+            </div>
+            <div class="btn-group" role="group">
+              <button class="btn btn-warning analyzebtn" type="button" id="resetbtn">Analyze</button>
+            </div>
             <div class="btn-group" role="group">
               <button class="btn btn-danger resetbtn" type="button" id="resetbtn">Reset Parameters</button>
             </div>
@@ -116,14 +143,14 @@
               <br>
               <span class="programs" style="display: none;">Program: ESL Classes</span>
               <br>
-              <span class="graphtype" style="display: none;">Graph Type: Participant Location Analysis</span>
+              <span class="graphtype" style="display: none;">Graph Type: Age Group Analysis</span>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-10 col-md-offset-1">
             <div class="well">
-              <img class="graph" src="images/graph1.png" alt="" style="width: 500px; length: 700px; display:none;"/>
+              <img href=""class="graph" src="images/graph2.png" alt="" style="width: 100%; length: 100%; display:none;"/>
             </div>
           </div>
         </div>
@@ -170,7 +197,7 @@
               </ul>
             </div>
             <div class="btn-group" role="group">
-              <button class="btn btn-warning incidencebtn" type="button" id="incidencebtn">Incidence Report</button>
+              <button href="#incidentdisplay" class="btn btn-warning incidencebtn" type="button" id="incidencebtn">Incidence Report</button>
             </div>
           </div>
         </div>
@@ -193,7 +220,7 @@
               <img class="graphinc" src="images/graph3.png" alt="" style="width: 100%; length: 100%; display:none;"/>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6" id="incidentdisplay">
             <div class="well graphinc" style="display:none;">
               <p>
                 <strong>For July 2015:</strong>

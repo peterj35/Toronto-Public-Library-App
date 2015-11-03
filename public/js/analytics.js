@@ -19,13 +19,21 @@ $(document).ready(function() {
   });
 
   $('.eslbtn').click(function(){
-    $graph.show();
     $programs.show();
+  });
+
+  $('.agebtn').click(function(){
+    $graphtype.show();
+  });
+
+  $('.analyzebtn').click(function(){
+    $graph.show();
   });
 
   $('.resetbtn').click(function(){
     $library.hide();
     $programs.hide();
+    $graphtype.hide();
     $graph.hide();
   });
 
