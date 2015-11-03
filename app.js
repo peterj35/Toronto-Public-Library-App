@@ -11,6 +11,11 @@ var cfenv = require('cfenv');
 var ejs = require('ejs');
 var bodyParser = require('body-parser');
 var watson = require('watson-developer-cloud');
+var mongo = require('mongodb')
+var mongoose = require('mongoose')
+var csvparser = require("./csvParser.js")
+var Event = require("./schemas/schemas")
+
 
 // create a new express server
 var app = express();
@@ -32,6 +37,14 @@ app.use('/', index);
 app.use('/catalog', catalog);
 app.use('/analytics', analytics);
 app.use('/createprogram', createprogram);
+
+var MongoClient = mongo.MongoClient
+
+mongoose.connect("mongodb://Administrator:justpingme1@ds049104.mongolab.com:49104/teampingme", function(err, db) {
+  if(!err) {
+    console.log("We are connected");
+  }
+});
 
 // start server on the specified port and binding host
 app.listen(appEnv.port, '0.0.0.0', function() {

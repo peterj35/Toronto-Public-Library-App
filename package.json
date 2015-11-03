@@ -1,20 +1,23 @@
 {
-	"name": "NodejsStarterApp",
-	"version": "0.0.1",
-	"description": "A sample nodejs app for Bluemix",
-	"scripts": {
-		"start": "node app.js"
-	},
-	"dependencies": {
-		"express": "4.12.x",
-		"cfenv": "1.0.x",
-		"ejs": "2.3.2",
-		"body-parser": "~1.13.2",
+  "name": "NodejsStarterApp",
+  "version": "0.0.1",
+  "description": "A sample nodejs app for Bluemix",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cfenv": "1.0.x",
+    "csv": "^0.4.6",
+    "ejs": "2.3.2",
+    "express": "4.12.x",
+    "mongodb": "^2.0.47",
+    "mongoose": "^4.2.4",
 		"knex": "~0.8.6",
 		"watson-developer-cloud": "0.10.6"
-	},
-	"repository": {},
-	"engines": {
-		"node": "0.12.x"
-	}
+  },
+  "repository": {},
+  "engines": {
+    "node": "0.12.x"
+  }
 }
