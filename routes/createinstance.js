@@ -12,9 +12,13 @@ router.get('/:programName', function(req, res, next) {
 
 router.post('/', function(req, res) {
 
-	db.createEvent(req.body.title, req.body.library, req.body.eventtype, req.body.agegroup, req.body.eventdate, req.body.starttime, req.body.endtime)
-
-	res.redirect('/catalog')
+	if (req.body.eventdate == "2015-07-07") {
+		res.redirect('/instancewarning')
+	}
+	else {
+		db.createEvent(req.body.title, req.body.library, req.body.eventtype, req.body.agegroup, req.body.eventdate, req.body.starttime, req.body.endtime)
+		res.redirect('/catalog')
+	}
 })
 
 module.exports = router;
