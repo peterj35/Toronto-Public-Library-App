@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>Catalog : Toronto Public Library Programs</title>
+    <title>Analytics : Toronto Public Library Programs</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,71 +40,94 @@
 
     <!-- Page Content -->
     <div>
-      <div class="container-fluid">
+      <div class="container">
         <div class="page-header">
           <h1>Analytics</h1>
         </div>
         <div class="col-md-12">
+          <div class="btn-group" role="group" aria-label="...">
+            <div class="btn-group"  role="group">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Library Branch Name
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#" class="malvernbtn">Malvern</a></li>
+                <li><a href="#" class="agincourtbtn">Agincourt</a></li>
+                <li><a href="#" class="downsviewbtn">Downsview</a></li>
+                <li><a href="#" class="evelynbtn">Evelyn Gregory</a></li>
+      	        <li><a href="#" class="albionbtn">Albion</a></li>
+      	        <li><a href="#" class="rexdalebtn">Rexdale</a></li>
+      	        <li><a href="#" class="maryvalebtn">Maryvale</a></li>
+              </ul>
+            </div>
+
+
+            <div class="btn-group"  role="group">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Programs
+                <span class="caret"></span>
+              </button>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><a href="#" class="eslbtn">ESL Classes</a></li>
+                <li><a href="#" class="babytimebtn">Babytime</a></li>
+                <li><a href="#" class="callbtn">Call of Gamers</a></li>
+                <li><a href="#" class="familybtn">Family Time</a></li>
+      	        <li><a href="#" class="readingbtn">Ready for Reading Toddler Time</a></li>
+      	        <li><a href="#" class="cantonesebtn">Cantonese Book Club</a></li>
+              </ul>
+            </div>
+
+            <div class="btn-group"  role="group">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Graph Type
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                <li><a href="#" class="participantbtn">Participant Location Analysis</a></li>
+                <li><a href="#" class="agebtn">Age Group Analysis</a></li>
+                <li><a href="#" class="languagebtn">Language Analysis</a></li>
+              </ul>
+            </div>
+            <div class="btn-group" role="group">
+              <button class="btn btn-danger resetbtn" type="button" id="resetbtn">Reset Parameters</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row margin-top">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="well library" style="display: none;">
+              Library Branch: Malvern
+              <br>
+              <span class="programs" style="display: none;">Program: ESL Classes</span>
+              <br>
+              <span class="graphtype" style="display: none;">Graph Type: Participant Location Analysis</span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="well">
+              <img class="graph" src="images/newapp-icon.png" alt="" style="display:none;"/>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-	
-	<div class="btn-group" role="group" aria-label="...">
-<div class="btn-group"  role="group">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Library Branch Name
-    <span class="caret"></span>
-  </button>
- <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">Malvern</a></li>
-    <li><a href="#">Agincourt</a></li>
-    <li><a href="#">Downsview</a></li>
-    <li><a href="#">Evelyn Gregory</a></li>
-	<li><a href="#">Albion</a></li>
-	<li><a href="#">Rexdale</a></li>
-	<li><a href="#">Maryvale</a></li>
-  </ul> 
-</div>
 
 
-<div class="btn-group"  role="group">
-<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Programs
-    <span class="caret"></span>
-  </button>
 
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <li><a href="#">ESL Classes</a></li>
-    <li><a href="#">Babytime</a></li>
-    <li><a href="#">Call of Gamers</a></li>
-    <li><a href="#">Family Time</a></li>
-	<li><a href="#">Ready for Reading Toddler Time</a></li>
-	<li><a href="#">Cantonese Book Club</a></li>
-  </ul>
-  
-</div> 
 
-<div class="btn-group"  role="group">
-<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    Graph Type
-    <span class="caret"></span>
-  </button>
-
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
-    <li><a href="#">Participant Location Analysis</a></li>
-    <li><a href="#">Age Group Analysis</a></li>
-    <li><a href="#">Language Analysis</a></li>
-  </ul>
-  
-</div> 
-</div>
-
-	
     <!-- jQuery -->
     <script src="js/jquery-1.11.3.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/analytics.js"></script>
   </body>
 
 </html>
