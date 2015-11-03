@@ -15,6 +15,7 @@ var mongo = require('mongodb')
 var mongoose = require('mongoose')
 var csvparser = require("./csvParser.js")
 var models = require("./schemas/schemas")
+var dbutil = require('./db.js')
 
 
 // create a new express server
@@ -68,6 +69,7 @@ mongoose.connect("mongodb://Administrator:justpingme1@ds049104.mongolab.com:4910
   if(!err) {
     console.log("We are connected");
   }
+  dbutil.findEventsFromProgramName("East Spoken Word & Poetry Collective")
 })
 
 // start server on the specified port and binding host
