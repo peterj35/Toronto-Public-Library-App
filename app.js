@@ -28,6 +28,8 @@ app.set('view engine', 'ejs');
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
 
+app.use(bodyParser())
+
 // Setup routes
 var index = require('./routes/index');
 var catalog = require('./routes/catalog');
