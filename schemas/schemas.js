@@ -26,5 +26,12 @@ var eventSchema = mongoose.Schema({
 	attendance: [userSchema]
 });
 
-module.exports = mongoose.model('User', userSchema);
-module.exports = mongoose.model('Event', eventSchema);
+var programSchema = mongoose.Schema({
+	name: String,
+	type: String,
+	events: [String]
+});
+
+exports.User = mongoose.model('User', userSchema),
+exports.Event = mongoose.model('Event', eventSchema),
+exports.Program = mongoose.model("Program", programSchema)

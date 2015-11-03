@@ -14,7 +14,7 @@ var watson = require('watson-developer-cloud');
 var mongo = require('mongodb')
 var mongoose = require('mongoose')
 var csvparser = require("./csvParser.js")
-var Event = require("./schemas/schemas")
+var models = require("./schemas/schemas")
 
 
 // create a new express server
@@ -66,7 +66,7 @@ mongoose.connect("mongodb://Administrator:justpingme1@ds049104.mongolab.com:4910
   if(!err) {
     console.log("We are connected");
   }
-});
+})
 
 // start server on the specified port and binding host
 app.listen(appEnv.port, '0.0.0.0', function() {

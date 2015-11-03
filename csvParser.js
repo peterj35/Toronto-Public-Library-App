@@ -1,5 +1,6 @@
 var csv = require('csv')
 var fs = require('fs')
+var models = require('./schemas/schemas')
 
 module.exports.parseData = function(filePath, callback) {
 	fs.readFile(filePath, function(err, data) {
@@ -13,5 +14,21 @@ module.exports.parseData = function(filePath, callback) {
 			}
 			callback(null, data)
 		})
+	})
+}
+
+module.exports.check = function(eventName, eventID, eventType, callback) {
+	models.Program.findOne({'name': eventName}, function(err, programData) {
+		if (err) {
+			console.log(err)
+		}
+
+		else {
+			console.log(programData)
+			models.Program.findOne({name: eventName}, function(err, program) {
+				program.events.push(eventID)
+				program.save()
+			})
+		}
 	})
 }
