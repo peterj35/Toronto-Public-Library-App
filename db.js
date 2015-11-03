@@ -6,7 +6,7 @@ module.exports.findEventsFromProgramName = function(programName, callback) {
 		if (err) {
 			return callback("Big time error")
 		}
-		callback(null, events)
+		//callback(null, events)
 	})
 
 }
