@@ -10,3 +10,14 @@ module.exports.findEventsFromProgramName = function(programName, callback) {
 	})
 
 }
+
+module.exports.findProgramFromName = function(programName, callback) {
+
+	models.Program.findOne({'name': programName}, function(err, program) {
+		if (err) {
+			return callback("Big time error")
+		}
+		callback(null, program)
+	})
+
+}
