@@ -22,10 +22,30 @@ module.exports.findProgramFromName = function(programName, callback) {
 
 }
 
-module.exports.createEvent = function(programName, location, eventType, age) {
-	//models.Event.
+module.exports.createProgram = function(programName, programType, programAge) {
+
+	models.Program.create({
+		name: programName,
+		type: programType,
+		age: programAge
+	})
+
 }
 
-module.exports.updateProgramWithNewEventInstance = function(programName, eventID) {
-
+module.exports.createEvent = function(programName, location, eventType, age) {
+	models.Event.create({
+		name: programName,
+		location: location,
+		eventType: eventType,
+		age: age
+	}, function(err, event) {
+		models.Program.findOne({'name': event.name}, function(err, program) {
+			if (!err) {
+				if (program) {
+					program.events.push(event._id)
+					program.save()
+				}
+			}
+		})
+	})
 }
