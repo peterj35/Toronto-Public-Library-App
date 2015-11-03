@@ -52,50 +52,57 @@
               <div class="row control-group">
                 <div class="form-group col-xs-12 floating-label-form-group controls">
                   <label>Title</label>
-                  <input type="text" class="form-control" value="<%= program.title %>" id="title" required data-validation-required-message="Please enter your name.">
+                  <input type="text" class="form-control" value="<%= program.title %>" name="title" id="title" required data-validation-required-message="Please enter your name.">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="row control-group">
                 <div class="form-group col-xs-12 floating-label-form-group controls">
                   <label>Library</label>
-                  <input type="text" class="form-control" placeholder="Malvern" id="library" required data-validation-required-message="Please enter your email address.">
+                  <input type="text" class="form-control" placeholder="Malvern" name="library" id="library" required data-validation-required-message="Please enter your email address.">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="row control-group">
                 <div class="form-group col-xs-12 floating-label-form-group controls">
                   <label>Event Type</label>
-                  <input type="text" class="form-control" value="<%= program.type %>" id="eventtype" required data-validation-required-message="Please enter the event type.">
+                  <input type="text" class="form-control" value="<%= program.type %>" name="eventtype" id="eventtype" required data-validation-required-message="Please enter the event type.">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="row control-group">
                 <div class="form-group col-xs-12 floating-label-form-group controls">
                   <label>Age Group</label>
-                  <input type="text" class="form-control" value="<%= program.age %>" id="agegroup" required data-validation-required-message="Please enter your phone number.">
+                  <input type="text" class="form-control" value="<%= program.age %>" name="agegroup" id="agegroup" required data-validation-required-message="Please enter your phone number.">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="row control-group">
                 <div class="form-group col-xs-12 floating-label-form-group controls">
                   <label>Event Date</label>
-                  <input type="text" class="form-control" placeholder="7/11/2015" id="agegroup" required data-validation-required-message="Please enter your phone number.">
+                  <input type="text" class="form-control" placeholder="2015-09-07" name="eventdate" id="eventdate" required data-validation-required-message="Please enter your phone number.">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="row control-group">
                 <div class="form-group col-xs-12 floating-label-form-group controls">
                   <label>Start Time</label>
-                  <input type="text" class="form-control" placeholder="9:30 AM" id="agegroup" required data-validation-required-message="Please enter your phone number.">
+                  <input type="text" class="form-control" placeholder="9:30 AM" name="starttime" id="starttime" required data-validation-required-message="Please enter your phone number.">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="row control-group">
                 <div class="form-group col-xs-12 floating-label-form-group controls">
                   <label>End Time</label>
-                  <input type="text" class="form-control" placeholder="12:30 AM" id="agegroup" required data-validation-required-message="Please enter your phone number.">
+                  <input type="text" class="form-control" placeholder="12:30 AM" name="endtime" id="endtime" required data-validation-required-message="Please enter your phone number.">
                   <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="row control-group" style="display:none; text-color: red;">
+                <div class="well">
+                  <p>
+                    Toronto Medical Officer of Health has extended the Extreme Heat Alert on this Day
+                  </p>
                 </div>
               </div>
               <div class="row">
@@ -115,6 +122,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/createinstance.js"></script>
   </body>
 
 </html>
