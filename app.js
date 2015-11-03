@@ -54,6 +54,7 @@ app.use('/createprogram', createprogram);
 app.use('/createinstance', createinstance);
 app.use('/text-to-speech', texttospeech);
 app.use('/programsubmit', programsubmit);
+app.use('/catalog/:programName', catalog)
 
 app.use('/graph1', graph1);
 app.use('/graph2', graph2);

@@ -15,4 +15,17 @@ router.get('/', function(req, res, next) {
     })
 });
 
+router.get('/:programName', function(req, res) {
+	var programName = req.params.programName
+
+	models.Event.find({name: programName}, function(err, events) {
+		if (err) {
+			console.log(err)
+		}
+		res.render('instances', {
+			events: events
+		})
+	})
+})
+
 module.exports = router;

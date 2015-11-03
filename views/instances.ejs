@@ -2,12 +2,12 @@
 <html>
 
   <head>
-    <title>Catalog : Toronto Public Library Programs</title>
+    <title>Catalog : Toronto Public Library Program Events</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
 
@@ -46,7 +46,7 @@
         </div>
         <div class="col-md-12">
           <div class="table-container">
-            <a href="/createprogram"><button type="button" class="btn btn-success">Create New Program</button></a>
+            <a href="/createinstance"><button type="button" class="btn btn-success">Create New Event</button></a>
             <table id="catalog" class="table margin-top">
               <thead>
                 <tr>
@@ -57,26 +57,32 @@
                     <a href="#">Event Type</a>
                   </th>
                   <th>
+                    <a href="#">Library</a>
+                  </th>
+                  <th>
                     <a href="#">Age Group</a>
                   </th>
                 </tr>
               </thead>
-              <% if (programs.length < 1) { %>
+              <% if (events.length < 1) { %>
                 <div class="row">
-                  No Programs found!
+                  No events found!
                 </div>
               <% } %>
               <tbody>
-                <% programs.forEach(function(program, i) { %>
+                <% events.forEach(function(event, i) { %>
                 <tr>
                   <td>
-                    <a href="/catalog/<%= program.name %>"><%= program.name %></a>
+                    <%= event.name %>
                   </td>
                   <td>
-                    <%= program.type %>
+                    <%= event.eventType %>
                   </td>
                   <td>
-                    <%= program.age %>
+                    <%= event.location %>
+                  </td>
+                  <td>
+                    <%= event.age %>
                   </td>
                 </tr>
                 <% }); %>
@@ -94,8 +100,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- catalog js -->
-    <script src="js/catalog.js"></script>
+  
   </body>
 
 </html>
