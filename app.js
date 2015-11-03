@@ -33,15 +33,19 @@ var index = require('./routes/index');
 var catalog = require('./routes/catalog');
 var analytics = require('./routes/analytics');
 var createprogram = require('./routes/createprogram');
+var createinstance = require('./routes/createinstance');
 var texttospeech = require('./routes/text-to-speech');
+//var program = require('./routes/program');
+
 
 app.use('/', index);
 app.use('/catalog', catalog);
 app.use('/analytics', analytics);
 app.use('/createprogram', createprogram);
+app.use('/createinstance', createinstance);
 app.use('/text-to-speech', texttospeech);
 
-//blog.use('/program', program);
+//catalog.use('/program', program);
 
 // For local development, replace username and password
 var textToSpeech = watson.text_to_speech({
@@ -69,7 +73,6 @@ mongoose.connect("mongodb://Administrator:justpingme1@ds049104.mongolab.com:4910
   if(!err) {
     console.log("We are connected");
   }
-  dbutil.findEventsFromProgramName("East Spoken Word & Poetry Collective")
 })
 
 // start server on the specified port and binding host
