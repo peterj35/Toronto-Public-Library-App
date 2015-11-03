@@ -38,6 +38,12 @@ var createprogram = require('./routes/createprogram');
 var createinstance = require('./routes/createinstance');
 var texttospeech = require('./routes/text-to-speech');
 var programsubmit = require('./routes/programsubmit');
+
+var graph1 = require('./routes/graph1');
+var graph2 = require('./routes/graph2');
+var graph3 = require('./routes/graph3');
+var graph4 = require('./routes/graph4');
+
 //var program = require('./routes/program');
 
 
@@ -48,6 +54,12 @@ app.use('/createprogram', createprogram);
 app.use('/createinstance', createinstance);
 app.use('/text-to-speech', texttospeech);
 app.use('/programsubmit', programsubmit);
+
+app.use('/graph1', graph1);
+app.use('/graph2', graph2);
+app.use('/graph3', graph3);
+app.use('/graph4', graph4);
+
 
 //catalog.use('/program', program);
 
