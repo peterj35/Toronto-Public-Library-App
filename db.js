@@ -32,12 +32,15 @@ module.exports.createProgram = function(programName, programType, programAge) {
 
 }
 
-module.exports.createEvent = function(programName, location, eventType, age) {
+module.exports.createEvent = function(programName, location, eventType, age, date, start, end) {
 	models.Event.create({
 		name: programName,
 		location: location,
 		eventType: eventType,
-		age: age
+		age: age,
+		date: date,
+		time: start,
+		end: end
 	}, function(err, event) {
 		models.Program.findOne({'name': event.name}, function(err, program) {
 			if (!err) {

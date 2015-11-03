@@ -45,10 +45,10 @@ app.use('/', index);
 app.use('/catalog', catalog);
 app.use('/analytics', analytics);
 app.use('/createprogram', createprogram);
-app.use('/createinstance', createinstance);
 app.use('/text-to-speech', texttospeech);
 app.use('/programsubmit', programsubmit);
 app.use('/catalog/:programName', catalog)
+app.use('/createinstance', createinstance)
 
 //catalog.use('/program', program);
 
