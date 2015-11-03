@@ -43,6 +43,8 @@ var graph1 = require('./routes/graph1');
 var graph2 = require('./routes/graph2');
 var graph3 = require('./routes/graph3');
 var graph4 = require('./routes/graph4');
+var graph5 = require('./routes/graph5');
+
 
 //var program = require('./routes/program');
 
@@ -60,6 +62,7 @@ app.use('/graph1', graph1);
 app.use('/graph2', graph2);
 app.use('/graph3', graph3);
 app.use('/graph4', graph4);
+app.use('/graph5', graph5);
 
 
 //catalog.use('/program', program);
