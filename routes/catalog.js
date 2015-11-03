@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var Event = require("../schemas/schemas")
+var models = require("../schemas/schemas")
 
 /* GET about page. */
 router.get('/', function(req, res, next) {
-    Event.find(function(err, events) {
+    models.Event.find(function(err, events) {
     	if (err) {
     		console.log(err)
     	}

@@ -14,7 +14,7 @@ var watson = require('watson-developer-cloud');
 var mongo = require('mongodb')
 var mongoose = require('mongoose')
 var csvparser = require("./csvParser.js")
-var Event = require("./schemas/schemas")
+var models = require("./schemas/schemas")
 
 
 // create a new express server
@@ -44,6 +44,30 @@ mongoose.connect("mongodb://Administrator:justpingme1@ds049104.mongolab.com:4910
   if(!err) {
     console.log("We are connected");
   }
+
+  var names = []
+
+  models.Event.find(function(err, events) {
+  /*	for (i=0; i<events.length; i++) {
+	  	if (names.indexOf(events[i].name) >= 0) {
+	  		// do nothing
+	  	}
+	  	else {
+	  		names.push(events[i].name)
+	  	}
+  	}
+
+  	for (j=0; j<names.length;j++) {
+  		models.Program.create({
+  			name: names[j]
+  		})
+  	}
+  
+  	*/
+  	for (i=0; i<events.length; i++) {
+  		csvparser.check(events[i].name, events[i]._id, events[i].eventType)
+  	}
+  })
 });
 
 // start server on the specified port and binding host
