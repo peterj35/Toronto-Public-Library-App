@@ -12,6 +12,9 @@ var ejs = require('ejs');
 var bodyParser = require('body-parser');
 var mongo = require('mongodb')
 var mongoose = require('mongoose')
+var csvparser = require("./csvParser.js")
+
+var Event = require("./schemas/schemas")
 
 // create a new express server
 var app = express();
