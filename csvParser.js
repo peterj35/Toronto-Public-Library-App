@@ -17,18 +17,16 @@ module.exports.parseData = function(filePath, callback) {
 	})
 }
 
-module.exports.check = function(eventName, eventID, eventType, callback) {
+module.exports.check = function(eventName, eventType, age, callback) {
 	models.Program.findOne({'name': eventName}, function(err, programData) {
 		if (err) {
 			console.log(err)
 		}
 
 		else {
-			console.log(programData)
-			models.Program.findOne({name: eventName}, function(err, program) {
-				program.events.push(eventID)
-				program.save()
-			})
+			programData.type=eventType
+			programData.age=age
+			programData.save()
 		}
 	})
 }

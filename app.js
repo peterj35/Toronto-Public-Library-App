@@ -69,7 +69,6 @@ mongoose.connect("mongodb://Administrator:justpingme1@ds049104.mongolab.com:4910
   if(!err) {
     console.log("We are connected");
   }
-  dbutil.findEventsFromProgramName("East Spoken Word & Poetry Collective")
 })
 
 // start server on the specified port and binding host

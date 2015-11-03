@@ -29,6 +29,7 @@ var eventSchema = mongoose.Schema({
 var programSchema = mongoose.Schema({
 	name: String,
 	type: String,
+	age: String,
 	events: [String]
 });
 

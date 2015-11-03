@@ -21,3 +21,11 @@ module.exports.findProgramFromName = function(programName, callback) {
 	})
 
 }
+
+module.exports.createEvent = function(programName, location, eventType, age) {
+	models.Event.
+}
+
+module.exports.updateProgramWithNewEventInstance = function(programName, eventID) {
+
+}
