@@ -48,6 +48,7 @@ app.use('/createprogram', createprogram);
 app.use('/createinstance', createinstance);
 app.use('/text-to-speech', texttospeech);
 app.use('/programsubmit', programsubmit);
+app.use('/catalog/:programName', catalog)
 
 //catalog.use('/program', program);
 
