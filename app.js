@@ -66,6 +66,7 @@ mongoose.connect("mongodb://Administrator:justpingme1@ds049104.mongolab.com:4910
   if(!err) {
     console.log("We are connected");
   }
+})
 
 // start server on the specified port and binding host
 app.listen(appEnv.port, '0.0.0.0', function() {
