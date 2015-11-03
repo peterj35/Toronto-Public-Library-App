@@ -4,7 +4,7 @@ var models = require("../schemas/schemas")
 
 /* GET about page. */
 router.get('/', function(req, res, next) {
-    models.Event.find(function(err, events) {
+    models.Program.find(function(err, events) {
     	if (err) {
     		console.log(err)
     	}

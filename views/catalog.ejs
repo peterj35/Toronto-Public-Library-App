@@ -54,9 +54,6 @@
                     <a href="#">Title</a>
                   </th>
                   <th>
-                    <a href="#">Library</a>
-                  </th>
-                  <th>
                     <a href="#">Event Type</a>
                   </th>
                   <th>
@@ -73,13 +70,10 @@
                 <% programs.forEach(function(program, i) { %>
                 <tr>
                   <td>
-                    <%= program.name %>
+                    <a href="/catalog/program/"><%= program.name %></a>
                   </td>
                   <td>
-                    <%= program.location %>
-                  </td>
-                  <td>
-                    <%= program.eventType %>
+                    <%= program.type %>
                   </td>
                   <td>
                     <%= program.age %>
